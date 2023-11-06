@@ -3,9 +3,9 @@ package Clase5;
 import javax.swing.JOptionPane;
 
 public class Clase5 {
-    
-    public static void main(String[] args){
-       /*
+
+    public static void main(String[] args) {
+        /*
         //Ejemplo1 
         
         //Solicitar al usuairo que ingrese un número y guardarlo en una variable
@@ -21,9 +21,9 @@ public class Clase5 {
         }else{
             JOptionPane.showMessageDialog(null, "El numero es impar");
         }
-*/
-       
-       /*
+         */
+
+ /*
        //Ejemplo 2
        
        String calificacion = JOptionPane.showInputDialog("Ingrese un número");
@@ -35,8 +35,8 @@ public class Clase5 {
        }else{
            JOptionPane.showMessageDialog(null, "Tu examen fue desaprobado");
        }
-*/
-       
+         */
+ /*
        //Ejemplo 3
        
        String num1 = JOptionPane.showInputDialog("Ingrese el primer número");
@@ -59,10 +59,31 @@ public class Clase5 {
        }
        
        JOptionPane.showMessageDialog(null, "El número mayor es: " + mayor);
-       
-       
-        
-        
+         */
+        //Solicitamos 2 numeros y una operacion
+        String num1 = JOptionPane.showInputDialog("Ingrese el primer número");
+
+        String num2 = JOptionPane.showInputDialog("Ingrese el segundo número");
+
+        String operacion = JOptionPane.showInputDialog("Ingrese la operacion a realizar");
+
+        //Inicializar una variable para el resultado
+        double resultado = 0;
+
+        //Realizar la operacion correspondiente según la entrada del usuario
+        switch (operacion) {
+            case "+" ->
+                resultado = Double.parseDouble(num1) + Double.parseDouble(num2);
+            case "-" ->
+                resultado = Double.parseDouble(num1) - Double.parseDouble(num2);
+            case "/" ->
+                resultado = Double.parseDouble(num1) / Double.parseDouble(num2);
+            case "*" ->
+                resultado = Double.parseDouble(num1) * Double.parseDouble(num2);
+            default ->
+                JOptionPane.showMessageDialog(null, "Error en la operacion");
+        }
+        JOptionPane.showMessageDialog(null, "Resultado: " + resultado);
     }
-    
+
 }
